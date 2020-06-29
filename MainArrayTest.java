@@ -1,4 +1,4 @@
-public class Main {
+public class MainArrayTest {
 	public static void main(String[] args) {
 		Array<String> s = new Array<String>();
 		s.insert("apple");
