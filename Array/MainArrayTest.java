@@ -27,7 +27,6 @@ public class MainArrayTest {
 		s.delete(0);
 		s.print();
 
-		
 		System.out.println("1 is " + s.peek(1) + ".");
 		System.out.println();
 
