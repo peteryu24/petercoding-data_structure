@@ -1,19 +1,19 @@
-public class MainArrayTest {
+public class Main {
 	public static void main(String[] args) {
 		Array<String> s = new Array<String>();
-		s.insert("apple");
+		s.insert("alpha");
 		s.print();
-		s.insert("banana");
-		s.print();
-		s.insert("cherry");
-		s.print();
-		s.insert("pineapple");
-		s.print();
-		s.insert("dort", 1);
-		s.print();
-		s.insert("echo", 4);
+		s.insert("beta");
 		s.print();
 		s.insert("charlie");
+		s.print();
+		s.insert("delta");
+		s.print();
+		s.insert("echo", 1);
+		s.print();
+		s.insert("foxtrot", 4);
+		s.print();
+		s.insert("golf");
 		s.print();
 
 		s.delete(4);
