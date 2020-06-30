@@ -9,7 +9,7 @@ public class Array<E> {
 		size = 0;
 	}
 
-	public E peek(int k) {
+	public E peek(int k) { // return a[]'s 'k'th item
 		if (size == 0 || k >= size) {
 			throw new NoSuchElementException();
 		}
@@ -23,14 +23,14 @@ public class Array<E> {
 		return false;
 	}
 
-	public void insertLast(E newItem) {
+	public void insertLast(E newItem) { // insert a new item in the last array
 		if (size == a.length) {
 			resize(2 * a.length);
 		}
 		a[size++] = newItem;
 	}
 
-	public void insert(E newItem, int k) {
+	public void insert(E newItem, int k) { // insert a new item in the a[]'s 'k'th array
 		if (size == a.length) {
 			resize(2 * a.length);
 		}
@@ -45,7 +45,7 @@ public class Array<E> {
 		insertLast(newItem);
 	}
 
-	private void resize(int newSize) {
+	private void resize(int newSize) { // resizing
 		Object[] t = new Object[newSize];
 		for (int i = 0; i < size; i++) {
 			t[i] = a[i];
@@ -53,7 +53,7 @@ public class Array<E> {
 		a = (E[]) t;
 	}
 
-	public E delete(int k) {
+	public E delete(int k) { // delete a[]'s 'k'th array
 		if (isEmpty()) {
 			throw new NoSuchElementException();
 
