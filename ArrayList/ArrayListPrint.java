@@ -29,7 +29,6 @@ public class ArrayListPrint {
 			System.out.println(value);
 		}
 		
-		Iterator<Integer> it3 = arrlist.iterator();
 		for(int value : arrlist){ 
 		    System.out.println(value);
 		}
