@@ -12,5 +12,6 @@ public class SimpleArraylist {
 		
 		System.out.println(arrlist.get(0)); // getting the value for index 0
 		System.out.println(arrlist.size()); //size: 1
+		System.out.println(arrlist.indexOf(1)); // which index has the value 1?
 	} 
 }
