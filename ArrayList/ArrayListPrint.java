@@ -20,7 +20,7 @@ public class ArrayListPrint {
 		System.out.println("Index's size: " + arrlist.size());
 		System.out.println();
 
-		Iterator<Integer> it1 = arrlist.iterator();  // three different ways to print an ArrayList
+		Iterator<Integer> it1 = arrlist.iterator();  // four different ways to print an ArrayList
 		while (it1.hasNext()) {
 			System.out.println(it1.next());
 		}
@@ -33,6 +33,10 @@ public class ArrayListPrint {
 		
 		for(int value : arrlist){ 
 		    System.out.println(value);
+		}
+		
+		for(int i=0; i<arrlist.size(); i++) {
+			System.out.println(arrlist.get(i));
 		}
 
 	}
