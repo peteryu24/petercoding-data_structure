@@ -16,7 +16,9 @@ public class ArrayListPrint {
 		arrlist.remove(5);
 
 		System.out.println("Index 0: " + arrlist.get(0));
+		System.out.println("Index 1; " + arrlist.indexOf(1));
 		System.out.println("Index's size: " + arrlist.size());
+		System.out.println();
 
 		Iterator<Integer> it1 = arrlist.iterator();  // three different ways to print an ArrayList
 		while (it1.hasNext()) {
