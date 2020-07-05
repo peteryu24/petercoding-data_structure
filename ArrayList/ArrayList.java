@@ -1,10 +1,10 @@
 import java.util.*;
 
-public class Array<E> {
+public class ArrayList<E> {
 	private E a[];
 	private int size;
 
-	public Array() {
+	public ArrayList() {
 		a = (E[]) new Object[1];
 		size = 0;
 	}
