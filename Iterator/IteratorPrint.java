@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class ArrayListPrint {
+public class IteratorPrint {
 	public static void main(String[] args) {
 
-		ArrayList<Integer> arrlist = new ArrayList<>();
+		Iterator<Integer> arrlist = new IteratorPrint<>();
 
 		arrlist.add(0);
 		arrlist.add(1, 1);
