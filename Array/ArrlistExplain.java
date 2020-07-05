@@ -1,6 +1,6 @@
 import java.util.NoSuchElementException;
 
-public class ArrlistExplain<E> { // <E> : Generic Class
+public class ArrlistExplain<E> { //  <E> : Generic Class
 	public E a[];// define Array's type : Generic
 	public int size;
 
