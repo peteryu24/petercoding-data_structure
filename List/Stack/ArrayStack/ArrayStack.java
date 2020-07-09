@@ -8,7 +8,7 @@ public class ArrayStack<E> {
 
 	public ArrayStack() {
 		a = (E[]) new Object[1];
-		top = -1; 
+		top = -1; // array starts with '0'
 	}
 
 	public int size() {
@@ -38,7 +38,7 @@ public class ArrayStack<E> {
 			throw new NoSuchElementException();
 		}
 		E item = a[top];
-		a[top--] = null;
+		a[top--] = null; // deleting the top and setting be one below as top
 		if (size() > 0 && size() == a.length / 4) {
 			resize(a.length / 2);
 		}
