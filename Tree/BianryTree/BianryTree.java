@@ -61,7 +61,7 @@ public class BianryTree {
 		if (root == null) {
 			return 0;
 		} else {
-			return 1 + (Math.min(depthcount(root.left), depthcount(root.right)));
+			return 1 + (Math.max(depthcount(root.left), depthcount(root.right)));
 		}
 
 	}
