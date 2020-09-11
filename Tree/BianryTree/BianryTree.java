@@ -1,5 +1,5 @@
 
-public class BinaryTree {
+public class BianryTree {
 	private TreeNode root;
 	public static int count;
 	public static int leafcount;
