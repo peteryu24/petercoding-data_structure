@@ -28,7 +28,7 @@ public class BianryTreeTest {
 
 		System.out.println(A.nodecount(node11)); 
 		System.out.println(A.leafcount(node11)); 
-		System.out.println(A.depthcount(node11)); 
+		System.out.println(A.depthcount(node11)-1); 
 
 	}
 }
