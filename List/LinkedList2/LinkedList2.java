@@ -24,17 +24,17 @@ public class LinkedList {
 
 	}
 
-	public void insert(ListNode p, Object x) {
+	public void insert(ListNode p, Object x) { //insert after p
 		ListNode newNode = new ListNode();
 		newNode.data = x;
 		if (firstNode == null) {
 			firstNode = newNode;
 			newNode.link = null;
-		} else if (p == null) {
+		} else if (p == null) { //if there is no p insert to firstNode
 			newNode.link = firstNode;
 			firstNode = newNode;
 		} else {
-			newNode.link = p.link;
+			newNode.link = p.link; // insert after p
 			p.link = newNode;
 		}
 		length++;
@@ -57,7 +57,7 @@ public class LinkedList {
 
 	}
 
-	public void delete(ListNode p, Object x) {
+	public void delete(ListNode p, Object x) { // delete after p
 		if (firstNode == null) {
 
 		} else if (p == null) {
