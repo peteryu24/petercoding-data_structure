@@ -45,16 +45,22 @@ public class CircularList {
 			tail = newNode;
 			newNode.link = newNode;
 		} else if (p == tail || p == null) {
-			newNode.link = tail.link; // newNode.next = tail.next(첫노드)
-			tail.link = (newNode); // tail.next는 새로운 노드를 가리킨다
-			tail = newNode;
+			ListNode current = tail;
+			while (current.link != tail) {
+				current = current.link;
+			}
+			newNode.link = current.link;
+			current.link = newNode;
 
 		} else {
-			while(h.link!=p) {
-				h=h.link;
+			ListNode current = tail;
+			while (current.link != p) {
+				current = current.link;
 			}
-			h.link=newNode;
-			newNode.link=h.link.link;
+			current = current.link;
+			newNode.link = current.link;
+			current.link = newNode;
+
 		}
 
 		length++;
@@ -76,44 +82,32 @@ public class CircularList {
 		System.out.println("크기: " + length);
 	}
 
-	public void delete(ListNode p) { 
-		ListNode h = tail.link;
-		if (tail == null) { // list가 비어있으면
-
-		}else {
-			if(p.data.equals(tail)) {
-				
-			}
-			
+	public void delete(ListNode p) {
+		if (tail == null) { // 공백 리스트 - 삭제 할 리스트가 없음
+			return;
+		} else if (p == null) { // 위치 미지정 - 첫번째 노드 삭제
+			tail.putLink(tail.getLink().getLink());
+			length--;
+		} else if (p == tail) { // 위치가 마지막 노드일 경우
+			System.out.println("삭제할 다음 리스트가 없습니다.");
+			return;
+		} else { // p의 다음 노드
+			p.putLink(p.getLink().getLink());
 			length--;
 		}
 	}
 
 	public ListNode listSearch(Object data) {
-		ListNode p = tail.link;
-		while (p != tail) {
-			if (p.data.equals(data)) {
-				return p;
-			}
-		}
-		return p;
-	}
-
-	public ListNode listSearch1(Object data) {
-		ListNode p = tail.link;
-		if (p == null) {
-			System.out.println("listSearch 에서 찾으시는 데이터가 없습니다.");
+		ListNode node = new ListNode(data);
+		if (tail == null) {
+			System.out.println("노드가 비어있습니다.");
 			return null;
 		} else {
-			do {
-				if (p.equals(data)) {
-					return p;
-				} else {
-					p = p.link;
-				}
-			} while (p != tail);
-			return p;
-
+			ListNode current = tail;
+			while (current.data != node.data) {
+				current = current.link;
+			}
+			return current;
 		}
 	}
 
